@@ -15,7 +15,7 @@ Dieses Repository enthält ausschließlich den Backend-Teil eines einfachen Blog
 ## Projekt klonen
 
 ```bash
-git clone https://github.com/mbahara/blog-backend.git
+git clone https://github.com/mbahara/blog.git
 cd blog
 ```
 
