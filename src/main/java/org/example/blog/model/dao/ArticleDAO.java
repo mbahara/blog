@@ -44,7 +44,7 @@ public class ArticleDAO extends DAO {
 
         try {
             final Connection conn = getConnection();
-            final PreparedStatement stmt = conn.prepareStatement("SELECT * FROM article "
+            final PreparedStatement stmt = conn.prepareStatement("SELECT * FROM \"ARTICLE\" "
                     + "WHERE LCASE(title) LIKE "
                     + "'%" + query.toLowerCase() + "%'"
                     + "ORDER BY id DESC");
@@ -75,7 +75,7 @@ public class ArticleDAO extends DAO {
         try {
             final Connection conn = getConnection();
             final Statement stmt = conn.createStatement();
-            final ResultSet rs = stmt.executeQuery("SELECT * FROM article ORDER BY id DESC");
+            final ResultSet rs = stmt.executeQuery("SELECT * FROM \"ARTICLE\" ORDER BY id DESC");
 
             while (rs.next()) {
                 articles.add(retrieveArticle(rs));

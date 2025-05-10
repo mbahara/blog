@@ -7,9 +7,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DAO {
-    private static final String JDBC_URL = System.getenv().getOrDefault("JDBC_URL", "jdbc:h2:mem:testdb");
-    private static final String JDBC_USER = System.getenv().getOrDefault("JDBC_USER", "db-user");
-    private static final String JDBC_PASSWORD = System.getenv().getOrDefault("JDBC_PASSWORD", "password+1");
+    private static final String JDBC_URL = "jdbc:h2:mem:testdb";
+    private static final String JDBC_USER = "sa";
+    private static final String JDBC_PASSWORD = "";
 
     @Getter
     private static final Connection connection;

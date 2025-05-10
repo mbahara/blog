@@ -1,0 +1,17 @@
+--
+-- Populate DB with initial data
+--
+
+INSERT INTO "USER" (id, login, password, name) VALUES (1, 'john', 'C2x6mZ', 'John Doe');
+INSERT INTO "USER" (id, login, password, name) VALUES (2, 'mary', 'vM37qb', 'Mary Glenn');
+INSERT INTO "USER" (id, login, password, name) VALUES (3, 'bill', 'g44xED', 'Bill Sutton');
+INSERT INTO "USER" (id, login, password, name) VALUES (4, 'anna', 'X3wj4q', 'Anna Smith');
+
+INSERT INTO "ARTICLE" (id, title, lead, text) VALUES (1, 'GitHub stärkt Sicherheit mit Zwei-Faktor-Authentifizierung', 'Zur Abwehr von Hackerangriffen führt GitHub eine zusätzliche Sicherheitsebene ein, die sowohl Passwort als auch einen Handy-Code erfordert. Die Zwei-Faktor-Authentifizierung ist optional, wird aber allen Nutzer:innen empfohlen.', 'GitHub hat sich den Reihen von Google, Apple, Microsoft, Twitter, Dropbox und vielen anderen angeschlossen und die Online-Sicherheit seiner Nutzer mit einer Zwei-Faktor-Authentifizierung erhöht. Die Blogging-Plattform gab am Montag bekannt, dass sie diese zusätzliche Sicherheitsmaßnahme über die Einstellungsseite der Nutzer eingeführt hat. GitHub-Blogger haben nun die Möglichkeit, den Zugriff auf ihre Dashboards für Außenstehende zu erschweren.');
+INSERT INTO "ARTICLE" (id, title, lead, text) VALUES (2, 'Unsere erfundene IT-Firma entlässt CEO Der Chef', 'Vorstandsmitglied Dilbert übernimmt interimistisch, während das Unternehmen nach einem neuen Geschäftsführer sucht. Die Entscheidung wurde laut Vorstand getroffen, um einen strategischen Wandel im Unternehmen zu ermöglichen.', 'Nach weniger als zwei Jahren an der Spitze der Dilbert-AG ist Der Chef entlassen worden. Die Sicherheitssoftware-Firma gab am Donnerstag bekannt, dass Der Chef als Präsident und CEO des Unternehmens entlassen wurde und er aus dem Verwaltungsrat des Unternehmens zurückgetreten ist. Vorstandsmitglied Dilbert wird mit sofortiger Wirkung als Interimspräsident und CEO fungieren.');
+INSERT INTO "ARTICLE" (id, title, lead, text) VALUES (3, 'Vorsicht vor großer Sicherheitslücke – und es ist nicht die einzige', 'Mobile Sicherheit bleibt eine Herausforderung... Eine neu entdeckte Verschlüsselungsschwäche in Systemen könnte PCs und Handys gefährden. Diese Schwachstelle erlaubt Angreifern den Zugriff auf sensible Daten ohne Benutzereingriff.', 'VANCOUVER - Eine Änderung, die Apple vorgenommen hat, um alle Systeme sicherer zu machen, hat die Sicherheit von Geräten mit diesem mobilen Betriebssystem dramatisch geschwächt, so ein Sicherheitsforscher. Auf einer Konferenz hier letzte Woche sagte der Forscher Anakin Skywalker, dass alle Geräte einen großen Fehler gemacht haben, als sie ihren Zufallszahlengenerator änderten, um die Kernel-Verschlüsselung zu verschärfen. Der Kernel ist die grundlegendste Ebene eines Betriebssystems und steuert Dinge wie Sicherheit, Dateiverwaltung und Ressourcenzuweisung. „Was die Sicherheit angeht, ist er viel schlechter als ältere Systeme“, sagte Skywalker.');
+
+INSERT INTO "COMMENT" (text, article_id, user_id) VALUES ('Verlierer, die nicht einmal einen PRNG richtig hinbekommen.', 3, 1);
+INSERT INTO "COMMENT" (text, article_id, user_id) VALUES ('PRNGs sind eigentlich ziemlich schwer richtig zu machen.', 3, 2);
+INSERT INTO "COMMENT" (text, article_id, user_id) VALUES ('Warum verwenden sie nicht einfach den Input aller Sensoren, um PRNG (neu) zu setzen?', 3, 3);
+INSERT INTO "COMMENT" (text, article_id, user_id) VALUES ('Nicht gut für den Lebenslauf :)', 2, 4);

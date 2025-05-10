@@ -20,7 +20,7 @@ public class CommentDAO extends DAO {
         try {
             final Connection conn = getConnection();
             final Statement stmt = conn.createStatement();
-            stmt.executeUpdate("INSERT INTO comment (text, article_id, user_id) "
+            stmt.executeUpdate("INSERT INTO \"COMMENT\" (text, article_id, user_id) "
                     + "VALUES ('" + comment.getText() + "', " + articleId +
                     ", " + comment.getUser().getId() + ")");
 
@@ -41,7 +41,7 @@ public class CommentDAO extends DAO {
         try {
             final Connection conn = getConnection();
             final Statement stmt = conn.createStatement();
-            final ResultSet rs = stmt.executeQuery("SELECT * FROM comment "
+            final ResultSet rs = stmt.executeQuery("SELECT * FROM \"COMMENT\" "
                     + "WHERE article_id = " + articleId +
                     " ORDER BY id");
 
