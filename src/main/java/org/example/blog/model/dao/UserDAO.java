@@ -13,7 +13,7 @@ public class UserDAO extends DAO {
         try {
             final Connection conn = getConnection();
             final Statement stmt = conn.createStatement();
-            final ResultSet rs = stmt.executeQuery("SELECT * FROM \"USER\" WHERE id = " + id);
+            final ResultSet rs = stmt.executeQuery("SELECT * FROM \"APP_USER\" WHERE id = " + id);
 
             if (!rs.next()) return null;
 
@@ -40,7 +40,7 @@ public class UserDAO extends DAO {
         try {
             final Connection conn = getConnection();
             final Statement stmt = conn.createStatement();
-            final ResultSet rs = stmt.executeQuery("SELECT * FROM \"USER\" WHERE login = '" + login + "'");
+            final ResultSet rs = stmt.executeQuery("SELECT * FROM \"APP_USER\" WHERE login = '" + login + "'");
 
             if (!rs.next()) return null;
 

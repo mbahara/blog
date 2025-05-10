@@ -2,7 +2,7 @@
 -- Create DB schema
 --
 
-CREATE TABLE "USER" (
+CREATE TABLE APP_USER (
                         id INT PRIMARY KEY AUTO_INCREMENT,
                         login VARCHAR(100) NOT NULL,
                         password VARCHAR(100) NOT NULL,
